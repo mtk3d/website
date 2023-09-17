@@ -8,9 +8,9 @@ sidebar_label: Stream
 
 `Stream` is composed of a head and a tail. Head contains first value, tail is lazy evaluated - subsequent values are calculated as needed.
 The stream has two implementations available:
- - `EmptyStream` which stand for empty stream (`Empty` is reserved keyword in PHP)
- - `Cons` which stand for a stream with one or more elements (consisting of a head and tail)
- 
+
+- `EmptyStream` which stand for empty stream (`Empty` is reserved keyword in PHP)
+- `Cons` which stand for a stream with one or more elements (consisting of a head and tail)
 
 ## Construction
 

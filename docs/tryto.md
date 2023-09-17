@@ -7,7 +7,7 @@ sidebar_label: TryTo
 The `TryTo` control gives us the ability to write safe code without focusing on try-catch blocks in the presence of exceptions.
 `TryTo` wraps given `callable` and catch any `Throwable` that will occur while executing it.
 
-Remember that `TryTo` will may re-throw exception when calling `get()` method. You can prevent from this using `isSuccess()` or `isFailure()` methods. 
+Remember that `TryTo` will may re-throw exception when calling `get()` method. You can prevent from this using `isSuccess()` or `isFailure()` methods.
 
 ## Construction
 
@@ -22,7 +22,7 @@ $result->getOrElse(new Result());
 
 ## Failure
 
-In case of an exception, `TryTo` returns an instance of `Failure`. 
+In case of an exception, `TryTo` returns an instance of `Failure`.  
 You can use `getCause(): Throwable` method to gets the underlying exception.
 
 ```php
@@ -45,11 +45,11 @@ $value = TryTo::run(function () {throw new \DomainException('use ddd'); })
 
 ## Methods
 
- - `andThen(callable $callable): self` - allow to chain next operation
- - `andFinally(callable $callable): self` - run given $callable whatever the result is
- - `onSuccess(callable $consumer): self` - run given $consumer with success value as an argument
- - `onFailure(callable $consumer): self`
- - `onSpecificFailure(string $throwable, callable $consumer): self`
+- `andThen(callable $callable): self` - allow to chain next operation
+- `andFinally(callable $callable): self` - run given $callable whatever the result is
+- `onSuccess(callable $consumer): self` - run given $consumer with success value as an argument
+- `onFailure(callable $consumer): self`
+- `onSpecificFailure(string $throwable, callable $consumer): self`
 
 ## Examples
 

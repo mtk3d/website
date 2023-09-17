@@ -4,8 +4,8 @@ title: Map
 sidebar_label: Map
 ---
 
-Map is a specific collection. It differs slightly from the other collections because 
-it consists not only of the value (V) but also of the key (K). 
+Map is a specific collection. It differs slightly from the other collections because  
+it consists not only of the value (V) but also of the key (K).  
 The current implementation allows only string keys.
 
 ## Construction
@@ -38,13 +38,13 @@ $map->get('hph'); // returns None()
 
 Map contains couple specific methods (in addition to those normally available for any `Traverasable`):
 
- - `put(string $key, $value): self` - add value for given key and returns new map instance (if key exist value will be replaces with newer one)
- - `remove(string $key): self` - removes existing key and returns new map instance (or same if key not exists)
- - `mapKeys(callable $keyMapper): self` - maps all keys with given $keyMapper
- - `mapValues(callable $valueMapper): self` - maps all values with given $valueMapper
- - `merge(self $map): self` - merge with other map, if collisions occur, the value of this map is taken
- - `containsKey(string $key): bool`
- - `containsValue($value): bool`
+- `put(string $key, $value): self` - add value for given key and returns new map instance (if key exist value will be replaces with newer one)
+- `remove(string $key): self` - removes existing key and returns new map instance (or same if key not exists)
+- `mapKeys(callable $keyMapper): self` - maps all keys with given $keyMapper
+- `mapValues(callable $valueMapper): self` - maps all values with given $valueMapper
+- `merge(self $map): self` - merge with other map, if collisions occur, the value of this map is taken
+- `containsKey(string $key): bool`
+- `containsValue($value): bool`
 
 ## Differences
 
@@ -64,6 +64,6 @@ $map->contains(Tuple::of('a', 'c')); //return false
 $map = Map::fromArray(['a' => 'b', 'c' => 'd', 'e' => 'f']);
 $map->head(); //return Tuple::of('a', 'b')
 $map->tail(); //return Tuple::of('e', 'f')
-``` 
+```
 
 `map()` and other iterable extension with `callable` as argument will receive `Tuple` as argument.

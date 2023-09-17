@@ -49,6 +49,7 @@ $result = match ('value') {
 </Tabs>
 
 There are four types of cases in munus:
+
 - `caseOf($value, $other)` - it's the case that compare value, and returns other value if is matched
 - `caseCall($value, callable $callable)` - it's the case that compare value, and returns the result of executed callable
 - `defaultOf($other)` - it's the default case that is matched if any of others are not, and returns other value
@@ -163,14 +164,14 @@ try {
 
 Munus provides some predicates, that helps with building alternatives.
 
- - `isIn(iterable $values)` - accepts `iterable` of any type, and check if value is matched to any of them
- - `isInstanceOf(string $className)` - accepts the class name, and check if the value is the instance of it
- - `isNull()` - check if the value is null
- - `isNotNull()` - check if the value is not null
- - `isValue($value)` - accepts value of any type and check if the values are same
- - `isAllOf(Predicate ...$predicates)` - accepts `iterable` of predicates, and check if all of them are matched
- - `isAnyOf(Predicate ...$predicates)` - accepts `iterable` of predicates, and check if any of them is matched
- - `isNoneOf(Predicate ...$predicates)` - accepts `iterable` of predicates, and check if none of them are matched
+- `isIn(iterable $values)` - accepts `iterable` of any type, and check if value is matched to any of them
+- `isInstanceOf(string $className)` - accepts the class name, and check if the value is the instance of it
+- `isNull()` - check if the value is null
+- `isNotNull()` - check if the value is not null
+- `isValue($value)` - accepts value of any type and check if the values are same
+- `isAllOf(Predicate ...$predicates)` - accepts `iterable` of predicates, and check if all of them are matched
+- `isAnyOf(Predicate ...$predicates)` - accepts `iterable` of predicates, and check if any of them is matched
+- `isNoneOf(Predicate ...$predicates)` - accepts `iterable` of predicates, and check if none of them are matched
 
 ### Usage
 
@@ -213,6 +214,7 @@ $result = match (true) {
     isIn($a, $b, $c)->meet($x) => 5
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -252,6 +254,7 @@ $result = match (true) {
     isInstanceOf(DateTime::class)->meet($x) => 5
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -294,6 +297,7 @@ $result = match (true) {
     isAllOf(isNotNull(), isValue('bar'))->meet($foo) => 5
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -333,6 +337,7 @@ $result = match (true) {
     isAnyOf(isNotNull(), isInstanceOf(DateTime::class))->meet($x) => 5
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -372,5 +377,6 @@ $result = match (true) {
     isNoneOf(isNotNull(), isInstanceOf(DateTime::class))->meet($x) => 5
 };
 ```
+
 </TabItem>
 </Tabs>

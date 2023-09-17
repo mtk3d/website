@@ -20,24 +20,26 @@ Functional programming is all about values and transformation of values using fu
 Munus provides the necessary controls and collections to accomplish this goal in every-day PHP programming.
 
 Control values:
- - [Option](option.md)
- - [Either](either.md)
- - [TryTo](tryto.md)
+
+- [Option](option.md)
+- [Either](either.md)
+- [TryTo](tryto.md)
 
 Collection values
- - [Map](map.md)
- - [Set](set.md)
- - [GenericList](list.md)
- - [Stream](stream.md)
- 
+
+- [Map](map.md)
+- [Set](set.md)
+- [GenericList](list.md)
+- [Stream](stream.md)
+
 Other values:
- - [Lazy](lazy.md)
- - [Tuple](tuple.md)
- - [Match](match.md)
+
+- [Lazy](lazy.md)
+- [Tuple](tuple.md)
+- [Match](match.md)
 
 ## Architecture
 
 Below you will find a bird's eye view. More detailed information about specific types can be found in this documentation.
 
 ![munus components](/img/components.png)
-
