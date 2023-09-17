@@ -9,7 +9,7 @@ either in an integer value (in the case of success) or an error message of type 
 
 ```php
 /** @var $value Either<string,int> */
-$value = compute().map(fn($i) => $i*2);
+$value = compute()->map(fn($i) => $i*2);
 ```
 
 If the result of compute() is 1, the value is `Right(2)`.
@@ -28,5 +28,3 @@ There are two named constructors available: `left` and `right`
 $either = Either::left('error');
 $either = Either::right('success');
 ```
-
-
